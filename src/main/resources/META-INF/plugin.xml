@@ -1,0 +1,54 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>org.le1a.JarLibsConsolidatorPro</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>JarLibsConsolidator二开版</name>
+
+    <!-- 设置兼容版本范围 -->
+    <idea-version since-build="241" until-build="251.*"/>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+<!--    <vendor email="le1a.github.io@gmail.com" url="https://le1a.github.io/">Le1a</vendor>-->
+        <vendor>Y0n3er</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>
+        <![CDATA[
+    <h3>感谢 Le1a 佬开源</h3>
+    <p>原项目地址: <a href="https://github.com/Le1a/JarLibsConsolidator">https://github.com/Le1a/JarLibsConsolidator</a></p>
+
+    <h3>二开版（AI 改逻辑）主要想实现的功能如下：</h3>
+    <ul>
+        <li><b>直接添加 Jar 进依赖库：</b>不再复制到一个目录后再添加，避免 Jar 冗余。</li>
+        <li><b>快速定位类所在 Jar：</b>在某些场景（如用友项目）方便查看类的目录结构。</li>
+    </ul>
+    ]]>
+    </description>
+
+
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <!-- Plugin actions -->
+    <actions>
+        <action id="org.le1a.jarlibsconsolidator.AddJarDependenciesAction"
+                class="org.le1a.jarlibsconsolidator.AddJarDependenciesAction"
+                text="一键添加依赖"
+                description="将项目中所有jar包依赖添加为库">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
