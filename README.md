@@ -1,6 +1,6 @@
 # JarLibsConsolidator 二开版
 
-感谢原作者 [Le1a](https://github.com/Le1a/JarLibsConsolidator) 的开源项目
+感谢原作者 [Le1a佬](https://github.com/Le1a/JarLibsConsolidator) 的开源项目
 
 ---
 
